@@ -31,6 +31,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
     { to: "/washing-solutions", text: "Washing Solutions" },
     { to: "/our-location", text: "Our Location" },
     { to: "/about-us", text: "About Us" },
+    { to: "/contact", text: "Contact" },
   ];
 
   return (
