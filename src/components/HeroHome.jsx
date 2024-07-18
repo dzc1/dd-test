@@ -5,7 +5,7 @@ import logoAlone from "@/src/assets/images/hero-section/dash-logo-alone.svg";
 import Typewriter from "typewriter-effect";
 import Lottie from "lottie-react";
 import arrow from "@/src/assets/animations/arrow.json";
-export const HeroNew = () => {
+export const HeroHome = () => {
   const smoother = () => {
     const mapElement = document.getElementById("attentionBlock");
     if (mapElement) {
@@ -19,15 +19,8 @@ export const HeroNew = () => {
   };
   return (
     <>
-      <section class="relative bg-orange-50">
-        <Image
-          src={waves}
-          width={0}
-          height={0}
-          alt="Logo Of Dash & Dry"
-          className="absolute top-0 left-0 w-full h-full"
-        />
-        <div class="relative py-40">
+      <section class="relative bg-white">
+        <div class="relative">
           <div class="container mx-auto px-4 relative">
             <div class="max-w-lg xl:max-w-4xl mx-auto text-center">
               <div className="flex justify-center">

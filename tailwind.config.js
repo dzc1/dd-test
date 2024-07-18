@@ -21,6 +21,7 @@ module.exports = {
         "dd-green-50": "#CCD3C2",
         "dd-green-100": "#B2CEBC",
         "dd-green-200": "#557561",
+        "dd-green-300": "#3f5748",
       },
       height: {
         400: "400px",

@@ -1,38 +1,38 @@
 import { useTranslations } from "next-intl";
-import { Hero } from "@/src/components/Hero";
-import { HeroNew } from "@/src/components/HeroNew";
+import { HeroHome } from "@/src/components/HeroHome";
 import { MapThree } from "@/src/components/MapThree";
 import { HeroAnimated } from "@/src/components/HeroAnimated";
 import { AtentionBlock } from "@/src/components/AtentionBlock";
 import { Maps } from "@/src/components/maps/Maps";
-import { ContactForm } from "@/src/components/ContactForm";
 import logoDash from "@/src/assets/images/logos/logo-white.svg";
 import location from "@/src/assets/images/about-section/location.jpeg";
 import machines from "@/src/assets/images/about-section/machines.jpg";
 import temperature from "@/src/assets/images/about-section/temperature.jpg";
 import community from "@/src/assets/images/about-section/community.jpg";
+import { Hero } from "@/src/components/home/Hero";
+import { Solutions } from "@/src/components/home/Solutions";
 import { Footer } from "@/src/components/Footer";
 
 export default function Home() {
   const t = useTranslations("IndexPage");
 
-  function propagateValues(obj) {
-    for (let key in obj) {
-      if (key !== "img" && key !== "logo") {
-        if (typeof obj[key] === "object") {
-          propagateValues(obj[key]);
-        } else if (Array.isArray(obj[key])) {
-          obj[key].forEach((item) => {
-            if (typeof item === "object") {
-              propagateValues(item);
-            }
-          });
-        } else {
-          obj[key] = t(key);
-        }
-      }
-    }
-  }
+  // function propagateValues(obj) {
+  //   for (let key in obj) {
+  //     if (key !== "img" && key !== "logo") {
+  //       if (typeof obj[key] === "object") {
+  //         propagateValues(obj[key]);
+  //       } else if (Array.isArray(obj[key])) {
+  //         obj[key].forEach((item) => {
+  //           if (typeof item === "object") {
+  //             propagateValues(item);
+  //           }
+  //         });
+  //       } else {
+  //         obj[key] = t(key);
+  //       }
+  //     }
+  //   }
+  // }
 
   const content = {
     hero: {
@@ -133,7 +133,9 @@ export default function Home() {
 
       <div className="inner-body">
         {/* <Hero {...content.hero} /> */}
-        <HeroNew />
+        <Hero />
+        <Solutions />
+        {/* <HeroHome /> */}
         <AtentionBlock {...content.attention} />
         <HeroAnimated {...content.about} />
         <Maps {...content.maps} />

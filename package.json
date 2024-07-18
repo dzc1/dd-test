@@ -1,5 +1,5 @@
 {
-  "name": "translation-test",
+  "name": "dash-n-dry-multi-language",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formfacade/embed-react": "^1.0.4",
     "@heroicons/react": "^2.1.3",
     "@react-email/components": "^0.0.16",
     "@react-email/render": "^0.0.12",

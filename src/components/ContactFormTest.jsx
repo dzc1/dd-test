@@ -3,7 +3,7 @@ import { useState } from "react";
 export const ContactFormTest = () => {
   let [confirmation, setConfirmation] = useState(false);
 
-  // Test Two
+  // Test
   function Submit(e) {
     e.preventDefault();
     const formEle = document.querySelector("form");
@@ -32,30 +32,35 @@ export const ContactFormTest = () => {
       .catch((error) => {
         console.log(error);
       });
+    setConfirmation(!confirmation);
   }
   return (
     <>
-      <form className="form" onSubmit={(e) => Submit(e)}>
-        <input
-          className="block"
-          placeholder="Your Name"
-          name="Name"
-          type="text"
-        />
-        <input
-          className="block"
-          placeholder="Your Email"
-          name="Email"
-          type="text"
-        />
-        <input
-          className="block"
-          placeholder="Your Message"
-          name="Message"
-          type="text"
-        />
-        <input className="block" name="Name" type="submit" />
-      </form>
+      {confirmation ? (
+        <h2>form submitted</h2>
+      ) : (
+        <form className="form" onSubmit={(e) => Submit(e)}>
+          <input
+            className="block"
+            placeholder="Your Name"
+            name="Name"
+            type="text"
+          />
+          <input
+            className="block"
+            placeholder="Your Email"
+            name="Email"
+            type="text"
+          />
+          <input
+            className="block"
+            placeholder="Your Message"
+            name="Message"
+            type="text"
+          />
+          <input className="block" name="Name" type="submit" />
+        </form>
+      )}
     </>
   );
 };
