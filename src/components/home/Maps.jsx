@@ -60,7 +60,7 @@ export const Maps = ({ heading, directions, textOne, cta }) => {
 
     setEmailError("");
     setResult("Sending....");
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEBFORMS_KEY);
+    formData.append("access_key", "7353b380-8002-4efe-a1d7-050210feaea7");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
