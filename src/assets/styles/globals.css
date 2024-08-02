@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -205,33 +209,7 @@ header {
 /* Structure Comps */
 
 body {
-  @apply font-dmSans;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-dmSans;
-}
-p {
-  @apply font-figtree text-gray-800 text-lg tracking-tight;
-}
-
-h1 {
-  @apply text-5xl xl:text-8xl tracking-tight mb-8;
-}
-
-h2 {
-  @apply text-4xl xl:text-6xl tracking-tighter font-bold;
-}
-h3 {
-  @apply text-3xl xl:text-4xl tracking-tighter font-bold;
-}
-h4 {
-  @apply text-xl xl:text-2xl font-bold;
+  @apply font-dmSans bg-gray-50;
 }
 
 /* New Comps */

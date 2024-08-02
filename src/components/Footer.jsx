@@ -18,27 +18,25 @@ export const Footer = ({ heading, subHeading, links }) => {
           alt="Dash & Dry Logo"
         />
         <div className="relative z-10 container px-4 mx-auto">
-          <div className="flex flex-wrap -m-8 ">
-            <div className="w-full md:w-1/2 p-8 gs_reveal_fromLeft gs_reveal">
-              <h2 className="font-bold tracking-tighter leading-10 md:leading-tight text-4xl md:text-5xl">
+          <div className="">
+            <div className="w-full">
+              <h2 className="text-center font-heading text-4xl xs:text-5xl sm:text-6xl xl:text-5xl tracking-tight gs_reveal">
                 {heading}
               </h2>
-              <h3 className="tracking-tighter leading-10 md:leading-tight flex items-center">
-                <span className="mr-2">
-                  {" "}
-                  <Image
-                    src={logoDash}
-                    width={200}
-                    height={200}
-                    alt="Dash & Dry Logo"
-                    className=""
-                  />
-                </span>
-                {"  "}
-                {subHeading}
-              </h3>
+
+              <div className="w-full flex justify-center gs_reveal">
+                {" "}
+                <Image
+                  src={logoDash}
+                  width={150}
+                  height={150}
+                  alt="Dash & Dry Logo"
+                  className=""
+                />
+              </div>
+              {"  "}
             </div>
-            <div className="w-full md:w-1/2 p-8">
+            {/* <div className="w-full md:w-1/2 p-8">
               <div className="flex flex-wrap -m-8 mb-10">
                 <div className="w-full sm:w-1/3 p-8">
                   <ul>
@@ -52,7 +50,7 @@ export const Footer = ({ heading, subHeading, links }) => {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

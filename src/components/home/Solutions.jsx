@@ -2,11 +2,16 @@
 import { useState, useEffect } from "react";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import logoAlone from "@/src/assets/images/hero-section/dash-logo-alone.svg";
+import { setupScrollAnimations } from "@/src/utils/animationUtils";
+import { handleScroll } from "@/src/utils/scrollUtils";
+import Link from "next/link";
 import Image from "next/image";
 import "animate.css";
 export const Solutions = () => {
   const [toggle, setToggle] = useState("cc");
-
+  useEffect(() => {
+    setupScrollAnimations();
+  }, []); // Empty dependency array ensures the effect runs only once on mount
   const handleToggle = (e, type, setToggle, setAnimation) => {
     e.preventDefault();
     setToggle(type);
@@ -14,6 +19,8 @@ export const Solutions = () => {
     setTimeout(() => setAnimation(""), 1000); // Reset animation state after 1 second
   };
   const [animation, setAnimation] = useState("");
+
+  const scrollToSection = (event) => handleScroll(event, "our-location");
 
   const washingPlans = [
     {
@@ -33,6 +40,7 @@ export const Solutions = () => {
       buttonBgColor: "",
       features: [
         "35 Minutes Wash Cycle",
+        "Water Temperatures: 90°C, 75°C, 60°C, 40°C and cold",
         "Washing Detergent",
         "Fabric Softener",
         "ActiveOzone Mist Technology (Disinfectant & Sanitizer)",
@@ -66,6 +74,7 @@ export const Solutions = () => {
       buttonBgColor: "",
       features: [
         "35 Minutes Wash Cycle",
+        "Water Temperatures: 90°C, 75°C, 60°C, 40°C and cold",
         "Washing Detergent",
         "Fabric Softener",
         "ActiveOzone Mist Technology (Disinfectant & Sanitizer)",
@@ -98,6 +107,7 @@ export const Solutions = () => {
       buttonBgColor: "",
       features: [
         "35 Minutes Wash Cycle",
+        "Water Temperatures: 90°C, 75°C, 60°C, 40°C and cold",
         "Washing Detergent",
         "Fabric Softener",
         "ActiveOzone Mist Technology (Disinfectant & Sanitizer)",
@@ -115,7 +125,7 @@ export const Solutions = () => {
     {
       temperature: [90, 80, 70],
       type: "dryer",
-      title: "Dryer - 18KG",
+      title: "18Kg Dryer",
       prices: {
         cash: "5.5€",
         cc: "6€",
@@ -129,10 +139,8 @@ export const Solutions = () => {
       buttonBorderColor: "border-lime-500 hover:border-white",
       buttonBgColor: "bg-lime-500 hover:bg-white",
       features: [
-        "35 Minutes Wash Cycle",
-        "Washing Detergent",
-        "Fabric Softener",
-        "ActiveOzone Mist Technology (Disinfectant & Sanitizer)",
+        "30 Minutes Dry Cycle",
+        "Heat options: High, Medium, Low and no heat",
       ],
       icon: (
         <>
@@ -149,21 +157,26 @@ export const Solutions = () => {
   ];
 
   return (
-    <section className="py-8">
-      <div className="container mx-auto px-4 gs_reveal_fromRight">
-        <div className="max-w-4xl mx-auto text-center mb-4 md:mb-6">
-          <h1 className="font-heading text-5xl mb-6">Our Washing Solutions</h1>
-          <p className="text-lg text-gray-700 mb-2">
+    <section id="solutions" className="mb-16 ">
+      <div className="container mx-auto px-4  h-full flex items-center flex-col">
+        <div className="max-w-4xl mx-auto text-center mb-4 md:mb-6 mt-4">
+          <h1 className="font-heading text-5xl xs:text-6xl sm:text-7xl xl:text-6xl tracking-tight gs_reveal mb-4">
+            Our Washing Solutions
+          </h1>
+          {/* <p className="text-lg text-gray-700 mb-2">
             Our prices are simple and designed to cater to individuals of any
             households.
-          </p>
-          <p className="text-lg text-gray-700">
-            We offer a variety of laundry machines, including three 12kg
-            washers, one 16kg washer, one 20kg washer, and two 18kg dryers.
-            Choose a load size that suits your needs and budget.
+          </p> */}
+          <p className="text-lg text-black gs_reveal">
+            We offer a variety of laundry machines, including{" "}
+            <span className="font-bold">3</span> 12kg washers,{" "}
+            <span className="font-bold">1</span> 16kg washer,
+            <span className="font-bold">1</span> 20kg washer, and{" "}
+            <span className="font-bold">2</span> 18kg dryers. Choose a load size
+            that suits your needs and budget.
           </p>
         </div>
-        <div className="flex md:flex-row flex-col mb-6 items-start md:items-center justify-end">
+        <div className="flex md:flex-row flex-col mb-6 items-start md:items-center justify-end gs_reveal">
           <div className="w-full flex flex-col">
             <span className="text-center">Price in</span>
             <div className="flex justify-center items-center">
@@ -232,41 +245,41 @@ export const Solutions = () => {
             </div>
           </div>
         </div>
-        <div className=" mx-auto lg:max-w-none">
+        <div className=" mx-auto lg:max-w-none gs_reveal">
           <div className="flex flex-wrap -mx-4">
             {washingPlans.map((plan, index) => (
               <div
                 key={index}
-                className="w-full md:w-1/2 lg:w-1/4 px-4 mb-12 lg:mb-0 "
+                className="w-full md:w-1/2 lg:w-1/4  px-4  lg:mb-0 "
               >
                 <div
-                  className={`mb-10 p-8 shadow-md shadow-dd-green-200 rounded-2xl ${plan.bgColor} `}
+                  className={`mb-10 p-8 shadow-md rounded-2xl ${plan.bgColor} h-full `}
                 >
-                  <div className="">{plan.icon}</div>
-                  <span
-                    className={`block text-2xl font-medium mt-8 mb-4 ${plan.textColor} `}
-                  >
-                    {plan.title}
-                  </span>
-                  {plan.customPrice ? (
-                    <span className={`block text-4xl ${plan.textColor} mb-6`}>
-                      Custom
+                  {/* Left Side */}
+                  <div>
+                    <div className="w-1/2">{plan.icon}</div>
+                    <span
+                      className={`block text-2xl font-medium  my-4 ${plan.textColor} `}
+                    >
+                      {plan.title}
                     </span>
-                  ) : (
-                    <div className="flex items-center mb-6">
-                      <span className={`text-5xl ${animation}`}>
-                        {plan.prices[toggle]}
+                    {plan.customPrice ? (
+                      <span className={`block text-3xl ${plan.textColor} mb-4`}>
+                        Custom
                       </span>
-                      <span
-                        className={`ml-4 text-xl font-medium text-gray-700`}
-                      >
-                        {plan.type === "washer"
-                          ? "per wash"
-                          : "per drying cycle"}
-                      </span>
-                    </div>
-                  )}
-                  <p
+                    ) : (
+                      <div className="flex items-center mb-4">
+                        <span className={`text-5xl ${animation}`}>
+                          {plan.prices[toggle]}
+                        </span>
+                        <span
+                          className={`ml-4 text-xl font-medium text-gray-700`}
+                        >
+                          {plan.type === "washer" ? "per wash" : "per dry"}
+                        </span>
+                      </div>
+                    )}
+                    {/* <p
                     className={`mt-4 ${
                       plan.textColor
                         ? "text-black text-md opacity-80"
@@ -274,27 +287,43 @@ export const Solutions = () => {
                     }`}
                   >
                     {plan.description}
-                  </p>
-                </div>
-                <div>
-                  <span className="block text-xl font-medium mb-2">
-                    Included in price
-                  </span>
-                  <ul>
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex mb-2 items-center">
-                        <span className="flex-shrink-0">
-                          <CheckCircleIcon className="w-6 h-6 text-dd-green-200" />
-                        </span>
-                        <span className="ml-3">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  </p> */}
+                  </div>
+                  {/* Right Side */}
+                  <div>
+                    <span className="block text-md font-medium mb-2">
+                      Included in price
+                    </span>
+                    <ul>
+                      {plan.features.map((feature, idx) => (
+                        <li key={idx} className="flex mb-2 items-center">
+                          <span className="flex-shrink-0">
+                            <CheckCircleIcon className="w-5 h-5 text-dd-green-200" />
+                          </span>
+                          <span className="ml-3">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  {/* CTA */}
+                  {/* Currently Not connected */}
+                  {/* <Link className="block w-full text-center mt-8" href="/test">
+                    Learn More
+                  </Link> */}
                 </div>
               </div>
             ))}
           </div>
         </div>
+      </div>
+      <div className="flex w-full justify-center items-center pt-8">
+        <Link
+          className="py-4 px-6  text-lg text-center font-medium text-white  bg-dd-green-300 hover:bg-dd-green-100 hover:text-black rounded-full transition duration-200"
+          href="#solutions"
+          onClick={scrollToSection}
+        >
+          Our Location
+        </Link>
       </div>
     </section>
   );

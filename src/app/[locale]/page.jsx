@@ -3,18 +3,19 @@ import { HeroHome } from "@/src/components/HeroHome";
 import { MapThree } from "@/src/components/MapThree";
 import { HeroAnimated } from "@/src/components/HeroAnimated";
 import { AtentionBlock } from "@/src/components/AtentionBlock";
-import { Maps } from "@/src/components/maps/Maps";
+import { Maps } from "@/src/components/home/Maps";
 import logoDash from "@/src/assets/images/logos/logo-white.svg";
 import location from "@/src/assets/images/about-section/location.jpeg";
 import machines from "@/src/assets/images/about-section/machines.jpg";
 import temperature from "@/src/assets/images/about-section/temperature.jpg";
 import community from "@/src/assets/images/about-section/community.jpg";
+
 import { Hero } from "@/src/components/home/Hero";
 import { Solutions } from "@/src/components/home/Solutions";
 import { Footer } from "@/src/components/Footer";
 
 export default function Home() {
-  const t = useTranslations("IndexPage");
+  const t = useTranslations("homePage");
 
   // function propagateValues(obj) {
   //   for (let key in obj) {
@@ -34,11 +35,25 @@ export default function Home() {
   //   }
   // }
 
+  const wordsArr = [
+    t("hero.words.one"),
+    t("hero.words.two"),
+    t("hero.words.three"),
+    t("hero.words.four"),
+  ];
+
   const content = {
     hero: {
       title: t("hero.title"),
       subtitle: t("hero.subtitle"),
       logo: logoDash,
+      ctaButton: t("hero.ctaButton"),
+      words: [
+        t("hero.words.one"),
+        t("hero.words.two"),
+        t("hero.words.three"),
+        t("hero.words.four"),
+      ],
     },
     attention: {
       textOne: t("attention.textOne"),
@@ -125,22 +140,14 @@ export default function Home() {
 
   return (
     <>
-      {/* <div className="p-8 animate">
-        <h4 className="font-light text-6xl">{t("title")}</h4>
-        <p className="animate pop">{t("description")}</p>
-        <p>{t("hero.title")}</p>
-      </div> */}
+      {/* <Hero {...content.hero} /> */}
+      <Hero {...content.hero} />
+      <Solutions />
+      <Maps {...content.maps} />
+      {/* <AtentionBlock {...content.attention} /> */}
+      {/* <HeroAnimated {...content.about} /> */}
 
-      <div className="inner-body">
-        {/* <Hero {...content.hero} /> */}
-        <Hero />
-        <Solutions />
-        {/* <HeroHome /> */}
-        <AtentionBlock {...content.attention} />
-        <HeroAnimated {...content.about} />
-        <Maps {...content.maps} />
-        <Footer {...content.footer} />
-      </div>
+      <Footer {...content.footer} />
     </>
   );
 }

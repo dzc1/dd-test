@@ -1,4 +1,20 @@
 {
+  "homePage": {
+    "hero": {
+      "title": "Pren-te un descans de",
+      "wordsss": ["Rentar", "Assecar", "Doblegar", "Ser Adult"],
+      "words": {
+        "one": "Rentar",
+        "two": "Assecar",
+        "three": "Doblegar",
+        "four": "Ser Adult"
+      },
+      "subtitle": "Acceptem-ho, rentar la roba és un rotllo. A Dash & Dry, fem que rentar la roba sigui divertit i productiu amb el nostre espai de bugaderia de co-treball únic en el seu tipus. Estalvia diners, recupera el teu temps i fes el que estimes",
+      "ctaButton": "Solucions de Rentat"
+    },
+    "solutions": {},
+    "maps": {}
+  },
   "IndexPage": {
     "title": "next-intl example - Home Page - Catalan",
     "description": "This is a basic example that demonstrates the usage of Catalan ",

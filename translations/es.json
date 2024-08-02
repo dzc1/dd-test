@@ -1,4 +1,20 @@
 {
+  "homePage": {
+    "hero": {
+      "title": "Tómate un descanso de",
+      "wordsss": ["Lavar", "Secar", "Doblar", "Ser Adulto"],
+      "words": {
+        "one": "Lavar",
+        "two": "Secar",
+        "three": "Doblar",
+        "four": "Ser Adulto"
+      },
+      "subtitle": "Aceptémoslo, lavar la ropa apesta. En Dash & Dry, hacemos que lavar la ropa sea divertido y productivo con nuestro espacio de lavandería de co-working único en su tipo. Ahorra dinero, recupera tu tiempo y haz lo que amas",
+      "ctaButton": "Soluciones de Lavado"
+    },
+    "solutions": {},
+    "maps": {}
+  },
   "IndexPage": {
     "title": "next-intl example - Home Page - Spaanish",
     "description": "This is a basic example that demonstrates the usage of Spaanish ",
