@@ -2,7 +2,6 @@
   "homePage": {
     "hero": {
       "title": "Tómate un descanso de",
-      "wordsss": ["Lavar", "Secar", "Doblar", "Ser Adulto"],
       "words": {
         "one": "Lavar",
         "two": "Secar",
@@ -12,7 +11,46 @@
       "subtitle": "Aceptémoslo, lavar la ropa apesta. En Dash & Dry, hacemos que lavar la ropa sea divertido y productivo con nuestro espacio de lavandería de co-working único en su tipo. Ahorra dinero, recupera tu tiempo y haz lo que amas",
       "ctaButton": "Soluciones de Lavado"
     },
-    "solutions": {},
+    "solutions": {
+      "title": "Nuestras Soluciones de Lavado",
+      "subtitle": "Ofrecemos una variedad de máquinas de lavandería, incluyendo 3 lavadoras de 12 kg, 1 lavadora de 16 kg, 1 lavadora de 20 kg y 2 secadoras de 18 kg. Elija un tamaño de carga que se adapte a sus necesidades y presupuesto.",
+      "priceInTitle": "Precio en",
+      "priceCcTitle": "Tarjeta de Crédito/Débito",
+      "priceFidelityTitle": "Tarjeta de Fidelidad",
+      "priceCashTitle": "Efectivo",
+      "saveFidelity": "Ahorre 15%",
+      "saveCash": "Ahorre 10%",
+      "priceCards": {
+        "washer": "Lavadora",
+        "dryer": "Secadora",
+        "perWash": "por lavado",
+        "perDry": "por secado",
+        "includedInPrice": "Incluido en el precio",
+        "features": {
+          "one": "Ciclo de Lavado de 35 Minutos",
+          "two": "Temperaturas del Agua: 90°C, 75°C, 60°C, 40°C y frío",
+          "three": "Detergente para Lavado",
+          "four": "Suavizante de Telas",
+          "five": "Tecnología ActiveOzone Mist (Desinfectante y Sanitizante)"
+        },
+        "washer1": {
+          "description": "Ideal para 20 camisetas, 4 pares de jeans y 4 toallas de baño"
+        },
+        "washer2": {
+          "description": "Ideal para 30 camisetas, 6 pares de jeans y 6 toallas de baño"
+        },
+        "washer3": {
+          "description": "Ideal para 35 camisetas, 8 pares de jeans y 8 toallas de baño"
+        },
+        "dryerDesc": {
+          "description": "Para negocios con necesidades y consumo significativos de secado",
+          "features": {
+            "one": "Ciclo de Secado de 30 Minutos",
+            "two": "Opciones de Calor: Alto, Medio, Bajo y sin calor"
+          }
+        }
+      }
+    },
     "maps": {}
   },
   "IndexPage": {

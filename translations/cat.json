@@ -2,7 +2,6 @@
   "homePage": {
     "hero": {
       "title": "Pren-te un descans de",
-      "wordsss": ["Rentar", "Assecar", "Doblegar", "Ser Adult"],
       "words": {
         "one": "Rentar",
         "two": "Assecar",
@@ -12,7 +11,46 @@
       "subtitle": "Acceptem-ho, rentar la roba és un rotllo. A Dash & Dry, fem que rentar la roba sigui divertit i productiu amb el nostre espai de bugaderia de co-treball únic en el seu tipus. Estalvia diners, recupera el teu temps i fes el que estimes",
       "ctaButton": "Solucions de Rentat"
     },
-    "solutions": {},
+    "solutions": {
+      "title": "Les Nostres Solucions de Rentat",
+      "subtitle": "Oferim una varietat de màquines de bugaderia, incloent-hi 3 rentadores de 12 kg, 1 rentadora de 16 kg, 1 rentadora de 20 kg i 2 assecadores de 18 kg. Trieu una mida de càrrega que s'adapti a les vostres necessitats i pressupost.",
+      "priceInTitle": "Preu en",
+      "priceCcTitle": "Targeta de Crèdit/Dèbit",
+      "priceFidelityTitle": "Targeta de Fidelitat",
+      "priceCashTitle": "Efectiu",
+      "saveFidelity": "Estalvieu 15%",
+      "saveCash": "Estalvieu 10%",
+      "priceCards": {
+        "washer": "Rentadora",
+        "dryer": "Assecadora",
+        "perWash": "per rentat",
+        "perDry": "per assecat",
+        "includedInPrice": "Inclòs en el preu",
+        "features": {
+          "one": "Cicle de Rentat de 35 Minuts",
+          "two": "Temperatures de l'Aigua: 90°C, 75°C, 60°C, 40°C i freda",
+          "three": "Detergent per a Rentat",
+          "four": "Suavitzant de Roba",
+          "five": "Tecnologia ActiveOzone Mist (Desinfectant i Sanititzant)"
+        },
+        "washer1": {
+          "description": "Ideal per a 20 samarretes, 4 parells de texans i 4 tovalloles de bany"
+        },
+        "washer2": {
+          "description": "Ideal per a 30 samarretes, 6 parells de texans i 6 tovalloles de bany"
+        },
+        "washer3": {
+          "description": "Ideal per a 35 samarretes, 8 parells de texans i 8 tovalloles de bany"
+        },
+        "dryerDesc": {
+          "description": "Per a negocis amb necessitats i consum significatius d'assecat",
+          "features": {
+            "one": "Cicle d'Assecat de 30 Minuts",
+            "two": "Opcions de Calor: Alt, Mig, Baix i sense calor"
+          }
+        }
+      }
+    },
     "maps": {}
   },
   "IndexPage": {

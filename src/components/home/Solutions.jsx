@@ -7,7 +7,23 @@ import { handleScroll } from "@/src/utils/scrollUtils";
 import Link from "next/link";
 import Image from "next/image";
 import "animate.css";
-export const Solutions = () => {
+export const Solutions = ({
+  title,
+  subtitle,
+  priceInTitle,
+  priceCcTitle,
+  priceFidelityTitle,
+  priceCashTitle,
+  saveFidelity,
+  saveCash,
+  washer,
+  dryer,
+  perWash,
+  perDry,
+  includedInPrice,
+  features,
+  dryerFeatures,
+}) => {
   const [toggle, setToggle] = useState("cc");
   useEffect(() => {
     setupScrollAnimations();
@@ -25,7 +41,7 @@ export const Solutions = () => {
   const washingPlans = [
     {
       type: "washer",
-      title: "12Kg Washer",
+      title: `12kg ${washer}`,
       prices: {
         cash: "6.5€",
         cc: "7€",
@@ -38,13 +54,7 @@ export const Solutions = () => {
       buttonTextColor: "text-black hover:text-white",
       buttonBorderColor: "border-teal-900 hover:bg-teal-900",
       buttonBgColor: "",
-      features: [
-        "35 Minutes Wash Cycle",
-        "Water Temperatures: 90°C, 75°C, 60°C, 40°C and cold",
-        "Washing Detergent",
-        "Fabric Softener",
-        "ActiveOzone Mist Technology (Disinfectant & Sanitizer)",
-      ],
+      features: features,
       temperature: [90, 80, 70],
       icon: (
         <Image
@@ -59,7 +69,7 @@ export const Solutions = () => {
     {
       temperature: [90, 80, 70],
       type: "washer",
-      title: "16Kg Washer",
+      title: `16Kg ${washer}`,
       prices: {
         cash: "7.5€",
         cc: "8€",
@@ -72,13 +82,7 @@ export const Solutions = () => {
       buttonTextColor: "text-black hover:text-white",
       buttonBorderColor: "border-teal-900 hover:bg-teal-900",
       buttonBgColor: "",
-      features: [
-        "35 Minutes Wash Cycle",
-        "Water Temperatures: 90°C, 75°C, 60°C, 40°C and cold",
-        "Washing Detergent",
-        "Fabric Softener",
-        "ActiveOzone Mist Technology (Disinfectant & Sanitizer)",
-      ],
+      features: features,
       icon: (
         <Image
           src={logoAlone}
@@ -92,7 +96,7 @@ export const Solutions = () => {
     {
       temperature: [90, 80, 70],
       type: "washer",
-      title: "20Kg Washer",
+      title: `20Kg ${washer}`,
       prices: {
         cash: "9€",
         cc: "9.5€",
@@ -105,13 +109,7 @@ export const Solutions = () => {
       buttonTextColor: "text-black hover:text-white",
       buttonBorderColor: "border-teal-900 hover:bg-teal-900",
       buttonBgColor: "",
-      features: [
-        "35 Minutes Wash Cycle",
-        "Water Temperatures: 90°C, 75°C, 60°C, 40°C and cold",
-        "Washing Detergent",
-        "Fabric Softener",
-        "ActiveOzone Mist Technology (Disinfectant & Sanitizer)",
-      ],
+      features: features,
       icon: (
         <Image
           src={logoAlone}
@@ -125,7 +123,7 @@ export const Solutions = () => {
     {
       temperature: [90, 80, 70],
       type: "dryer",
-      title: "18Kg Dryer",
+      title: `18Kg ${dryer}`,
       prices: {
         cash: "5.5€",
         cc: "6€",
@@ -138,10 +136,7 @@ export const Solutions = () => {
       buttonTextColor: "text-black",
       buttonBorderColor: "border-lime-500 hover:border-white",
       buttonBgColor: "bg-lime-500 hover:bg-white",
-      features: [
-        "30 Minutes Dry Cycle",
-        "Heat options: High, Medium, Low and no heat",
-      ],
+      features: dryerFeatures,
       icon: (
         <>
           <Image
@@ -161,24 +156,17 @@ export const Solutions = () => {
       <div className="container mx-auto px-4  h-full flex items-center flex-col">
         <div className="max-w-4xl mx-auto text-center mb-4 md:mb-6 mt-4">
           <h1 className="font-heading text-5xl xs:text-6xl sm:text-7xl xl:text-6xl tracking-tight gs_reveal mb-4">
-            Our Washing Solutions
+            {title}
           </h1>
           {/* <p className="text-lg text-gray-700 mb-2">
             Our prices are simple and designed to cater to individuals of any
             households.
           </p> */}
-          <p className="text-lg text-black gs_reveal">
-            We offer a variety of laundry machines, including{" "}
-            <span className="font-bold">3</span> 12kg washers,{" "}
-            <span className="font-bold">1</span> 16kg washer,
-            <span className="font-bold">1</span> 20kg washer, and{" "}
-            <span className="font-bold">2</span> 18kg dryers. Choose a load size
-            that suits your needs and budget.
-          </p>
+          <p className="text-lg text-black gs_reveal">{subtitle}</p>
         </div>
         <div className="flex md:flex-row flex-col mb-6 items-start md:items-center justify-end gs_reveal">
           <div className="w-full flex flex-col">
-            <span className="text-center">Price in</span>
+            <span className="text-center">{priceInTitle}</span>
             <div className="flex justify-center items-center">
               <div className="relative flex h-5 px-0.5 items-center justify-between transition duration-200 ease-linear rounded-full bg-dd-green shadow ">
                 <a
@@ -216,30 +204,30 @@ export const Solutions = () => {
                     toggle === "cash" ? "" : "hidden"
                   }`}
                 >
-                  Cash
+                  {priceCashTitle}
                 </span>
                 <span
                   className={`ml-4 font-medium text-xl ${
                     toggle === "cc" ? "" : "hidden"
                   }`}
                 >
-                  Credit/Debit Card
+                  {priceCcTitle}
                 </span>
                 <span
                   className={`ml-4 font-medium text-xl ${
                     toggle === "fidelity" ? "" : "hidden"
                   }`}
                 >
-                  Fidelity Card
+                  {priceFidelityTitle}
                 </span>
               </div>
               <span className="inline-block mt-5 md:mt-0 px-2 text-md leading-6 text-teal-800 font-medium bg-lime-50 rounded-full ml-2">
                 {toggle === "cc"
                   ? ""
                   : toggle === "cash"
-                  ? "Save 10%"
+                  ? saveCash
                   : toggle === "fidelity"
-                  ? "Save 15%"
+                  ? saveFidelity
                   : ""}
               </span>
             </div>
@@ -275,24 +263,15 @@ export const Solutions = () => {
                         <span
                           className={`ml-4 text-xl font-medium text-gray-700`}
                         >
-                          {plan.type === "washer" ? "per wash" : "per dry"}
+                          {plan.type === "washer" ? perWash : perDry}
                         </span>
                       </div>
                     )}
-                    {/* <p
-                    className={`mt-4 ${
-                      plan.textColor
-                        ? "text-black text-md opacity-80"
-                        : "text-md"
-                    }`}
-                  >
-                    {plan.description}
-                  </p> */}
                   </div>
                   {/* Right Side */}
                   <div>
                     <span className="block text-md font-medium mb-2">
-                      Included in price
+                      {includedInPrice}
                     </span>
                     <ul>
                       {plan.features.map((feature, idx) => (

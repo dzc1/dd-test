@@ -3,7 +3,6 @@
     "hero": {
       "ctaButton": "Washing Solutions",
       "title": "Take a break from",
-      "wordss": ["Washing", "Drying", "Folding", "Adulting"],
       "words": {
         "one": "Washing",
         "two": "Drying",
@@ -11,6 +10,46 @@
         "four": "Adulting"
       },
       "subtitle": "Let's face it, laundry sucks. At Dash & Dry, we make doing laundry fun and productive with our one-of-a-kind co-working laundry space! Save money, reclaim your time, and do what you love"
+    },
+    "solutions": {
+      "title": "Our Washing Solutions",
+      "subtitle": "We offer a variety of laundry machines, including 3 12kg washers, 1 16kg washer,1 20kg washer, and 2 18kg dryers. Choose a load size that suits your needs and budget.",
+      "priceInTitle": "Price in",
+      "priceCcTitle": "Credit/Debit Card",
+      "priceFidelityTitle": "Fidelity Card",
+      "priceCashTitle": "Cash",
+      "saveFidelity": "Save 15%",
+      "saveCash": "Save 10%",
+      "priceCards": {
+        "washer": "Washer",
+        "dryer": "Dryer",
+        "perWash": "per wash",
+        "perDry": "per dry",
+        "includedInPrice": "Included in price",
+        "features": {
+          "one": "35 Minutes Wash Cycle",
+          "two": "Water Temperatures: 90°C, 75°C, 60°C, 40°C and cold",
+          "three": "Washing Detergent",
+          "four": "Fabric Softener",
+          "five": "ActiveOzone Mist Technology (Disinfectant & Sanitizer)"
+        },
+        "washer1": {
+          "description": "Great for 20 T-shirts, 4 pairs of jeans, and 4 bath towels"
+        },
+        "washer2": {
+          "description": "Great for 30 T-shirts, 6 pairs of jeans, and 6 bath towels"
+        },
+        "washer3": {
+          "description": "Great for 35 T-shirts, 8 pairs of jeans, and 8 bath towels"
+        },
+        "dryerDesc": {
+          "description": "For businesses with significant drying needs and consumption",
+          "features": {
+            "one": "30 Minutes Dry Cycle",
+            "two": "Heat options: High, Medium, Low and no heat"
+          }
+        }
+      }
     }
   }
 }

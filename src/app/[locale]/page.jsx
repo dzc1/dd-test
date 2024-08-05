@@ -35,13 +35,6 @@ export default function Home() {
   //   }
   // }
 
-  const wordsArr = [
-    t("hero.words.one"),
-    t("hero.words.two"),
-    t("hero.words.three"),
-    t("hero.words.four"),
-  ];
-
   const content = {
     hero: {
       title: t("hero.title"),
@@ -53,6 +46,33 @@ export default function Home() {
         t("hero.words.two"),
         t("hero.words.three"),
         t("hero.words.four"),
+      ],
+    },
+    solutions: {
+      title: t("solutions.title"),
+      subtitle: t("solutions.subtitle"),
+      priceInTitle: t("solutions.priceInTitle"),
+      priceCcTitle: t("solutions.priceCcTitle"),
+      priceFidelityTitle: t("solutions.priceFidelityTitle"),
+      priceCashTitle: t("solutions.priceCashTitle"),
+      saveFidelity: t("solutions.saveFidelity"),
+      saveCash: t("solutions.saveCash"),
+      washer: t("solutions.priceCards.washer"),
+      dryer: t("solutions.priceCards.dryer"),
+      perWash: t("solutions.priceCards.perWash"),
+      perDry: t("solutions.priceCards.perDry"),
+      includedInPrice: t("solutions.priceCards.includedInPrice"),
+      ourLocation: t("solutions.ourLocation"),
+      features: [
+        t("solutions.priceCards.features.one"),
+        t("solutions.priceCards.features.two"),
+        t("solutions.priceCards.features.three"),
+        t("solutions.priceCards.features.four"),
+        t("solutions.priceCards.features.five"),
+      ],
+      dryerFeatures: [
+        t("solutions.priceCards.dryerDesc.features.one"),
+        t("solutions.priceCards.dryerDesc.features.two"),
       ],
     },
     attention: {
@@ -142,12 +162,13 @@ export default function Home() {
     <>
       {/* <Hero {...content.hero} /> */}
       <Hero {...content.hero} />
-      <Solutions />
-      <Maps {...content.maps} />
+      <Solutions {...content.solutions} />
+      {/* <Maps {...content.maps} /> */}
+
       {/* <AtentionBlock {...content.attention} /> */}
       {/* <HeroAnimated {...content.about} /> */}
 
-      <Footer {...content.footer} />
+      {/* <Footer {...content.footer} /> */}
     </>
   );
 }

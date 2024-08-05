@@ -84,7 +84,7 @@ const Header = ({ links }) => {
         </div>
       </section>
       {/* DESKTOP MENU */}
-      <div ref={themeSwitcherRef}>
+      <div className="sticky top-0 overflow-hidden z-50" ref={themeSwitcherRef}>
         <LangSwitcherTwo />
         {/* <LangSwitcher /> */}
       </div>

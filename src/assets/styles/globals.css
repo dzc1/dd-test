@@ -385,7 +385,7 @@ img {
 /* Header Component */
 
 .header-outer-container {
-  @apply overflow-hidden px-4 md:px-6 animate fade-in-nav bg-dd-green-100 sticky top-0 z-40;
+  @apply overflow-hidden px-4 md:px-6 animate fade-in-nav bg-dd-green-100 sticky top-10 z-40;
 }
 
 .header-inner-container {
