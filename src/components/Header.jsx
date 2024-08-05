@@ -89,7 +89,7 @@ const Header = ({ links }) => {
         {/* <LangSwitcher /> */}
       </div>
       <div className="header-outer-container">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-center items-center py-4">
           <div className="w-full">
             <div className="header-inner-container">
               <div className="header-logo-container">
