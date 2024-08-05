@@ -75,6 +75,23 @@ export default function Home() {
         t("solutions.priceCards.dryerDesc.features.two"),
       ],
     },
+    maps: {
+      title: t("maps.title"),
+      cta: t("maps.cta"),
+      contactForm: {
+        success: {
+          title: t("maps.contactForm.success.title"),
+          cta: t("maps.contactForm.success.cta"),
+        },
+        empty: {
+          title: t("maps.contactForm.empty.title"),
+          inputName: t("maps.contactForm.empty.inputName"),
+          inputEmail: t("maps.contactForm.empty.inputEmail"),
+          inputMessage: t("maps.contactForm.empty.inputMessage"),
+          cta: t("maps.contactForm.empty.cta"),
+        },
+      },
+    },
     attention: {
       textOne: t("attention.textOne"),
       textTwo: t("attention.textTwo"),
@@ -95,17 +112,6 @@ export default function Home() {
           cta: t("attention.cards.cardTwo.cta"),
         },
       ],
-    },
-    maps: {
-      heading: t("maps.heading"),
-      directions: {
-        street: "C/ del Consell de Cent, 122",
-        city: "L'Eixample",
-        state: "Barcelona, Spain",
-        zipcode: "08015",
-      },
-      textOne: t("maps.textOne"),
-      cta: t("maps.cta"),
     },
     about: {
       content: [
@@ -163,12 +169,12 @@ export default function Home() {
       {/* <Hero {...content.hero} /> */}
       <Hero {...content.hero} />
       <Solutions {...content.solutions} />
-      {/* <Maps {...content.maps} /> */}
+      <Maps {...content.maps} />
 
       {/* <AtentionBlock {...content.attention} /> */}
       {/* <HeroAnimated {...content.about} /> */}
 
-      {/* <Footer {...content.footer} /> */}
+      <Footer {...content.footer} />
     </>
   );
 }

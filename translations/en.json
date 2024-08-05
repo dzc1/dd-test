@@ -12,6 +12,7 @@
       "subtitle": "Let's face it, laundry sucks. At Dash & Dry, we make doing laundry fun and productive with our one-of-a-kind co-working laundry space! Save money, reclaim your time, and do what you love"
     },
     "solutions": {
+      "ourLocation": "Our Location",
       "title": "Our Washing Solutions",
       "subtitle": "We offer a variety of laundry machines, including 3 12kg washers, 1 16kg washer,1 20kg washer, and 2 18kg dryers. Choose a load size that suits your needs and budget.",
       "priceInTitle": "Price in",
@@ -48,6 +49,23 @@
             "one": "30 Minutes Dry Cycle",
             "two": "Heat options: High, Medium, Low and no heat"
           }
+        }
+      }
+    },
+    "maps": {
+      "title": "Where can you find us?",
+      "cta": "Directions",
+      "contactForm": {
+        "success": {
+          "title": "Your message has been sent successfully.",
+          "cta": "Send another message"
+        },
+        "empty": {
+          "title": "Send us a message",
+          "inputName": "Name",
+          "inputEmail": "Email",
+          "inputMessage": "Message",
+          "cta": "Send Message"
         }
       }
     }

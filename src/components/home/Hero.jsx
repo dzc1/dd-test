@@ -14,8 +14,8 @@ export const Hero = ({ title, words, subtitle, ctaButton }) => {
   const scrollToSection = (event) => handleScroll(event, "solutions");
 
   return (
-    <div className="container mx-auto mt-24 mb-32">
-      <div className="flex flex-wrap -mx-4 items-center justify-center h-full">
+    <div className="container mx-auto mt-10 md:mt-24 mb-32">
+      <div className="flex flex-wrap lg:-mx-4 items-center justify-center h-full">
         {/* Left Side - Info Text */}
         <div className="w-full lg:w-1/3 px-4 mb-16 lg:mb-0 gs_reveal">
           <div className="max-w-lg lg:max-w-none mx-auto">
@@ -35,7 +35,7 @@ export const Hero = ({ title, words, subtitle, ctaButton }) => {
             <p className="text-lg text-gray-700 mb-10">{subtitle}</p>
 
             <Link
-              className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white bg-dd-green-300 hover:bg-dd-green-100 hover:text-black rounded-full transition duration-200"
+              className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white bg-dd-green-300 hover:bg-dd-green-100 hover:text-black rounded-full transition duration-200 w-full"
               href="#solutions"
               onClick={scrollToSection}
             >

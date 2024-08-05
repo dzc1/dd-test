@@ -12,6 +12,7 @@
       "ctaButton": "Solucions de Rentat"
     },
     "solutions": {
+      "ourLocation": "La Nostra Ubicació",
       "title": "Les Nostres Solucions de Rentat",
       "subtitle": "Oferim una varietat de màquines de bugaderia, incloent-hi 3 rentadores de 12 kg, 1 rentadora de 16 kg, 1 rentadora de 20 kg i 2 assecadores de 18 kg. Trieu una mida de càrrega que s'adapti a les vostres necessitats i pressupost.",
       "priceInTitle": "Preu en",
@@ -51,7 +52,23 @@
         }
       }
     },
-    "maps": {}
+    "maps": {
+      "title": "On ens podeu trobar?",
+      "cta": "Indicacions",
+      "contactForm": {
+        "success": {
+          "title": "El vostre missatge ha estat enviat amb èxit.",
+          "cta": "Enviar un altre missatge"
+        },
+        "empty": {
+          "title": "Envieu-nos un missatge",
+          "inputName": "Nom",
+          "inputEmail": "Correu Electrònic",
+          "inputMessage": "Missatge",
+          "cta": "Enviar Missatge"
+        }
+      }
+    }
   },
   "IndexPage": {
     "title": "next-intl example - Home Page - Catalan",

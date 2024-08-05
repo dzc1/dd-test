@@ -20,11 +20,11 @@ export const Footer = ({ heading, subHeading, links }) => {
         <div className="relative z-10 container px-4 mx-auto">
           <div className="">
             <div className="w-full">
-              <h2 className="text-center font-heading text-4xl xs:text-5xl sm:text-6xl xl:text-5xl tracking-tight gs_reveal">
+              <h2 className="text-center font-heading text-4xl xs:text-5xl sm:text-6xl xl:text-5xl tracking-tight ">
                 {heading}
               </h2>
 
-              <div className="w-full flex justify-center gs_reveal">
+              <div className="w-full flex justify-center ">
                 {" "}
                 <Image
                   src={logoDash}

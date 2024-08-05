@@ -33,7 +33,7 @@ const AnyReactComponent = ({ cta }) => {
   );
 };
 
-export const Maps = ({ heading, directions, textOne, cta }) => {
+export const Maps = ({ title, cta, contactForm }) => {
   const defaultProps = {
     center: [41.38119223821082, 2.152590072999012],
     zoom: 19,
@@ -91,8 +91,8 @@ export const Maps = ({ heading, directions, textOne, cta }) => {
 
   return (
     <section id="our-location" className="w-full">
-      <div className="bg-white w-full flex flex-grow justify-around">
-        <div className="w-1/2">
+      <div className=" w-full flex-col-reverse md:flex-row	flex md:flex-grow justify-around items-center bg-dd-green-100">
+        <div className="w-full md:w-1/2">
           <div style={{ height: "80vh", width: "100%" }}>
             <GoogleMapReact
               bootstrapURLKeys={{
@@ -111,47 +111,38 @@ export const Maps = ({ heading, directions, textOne, cta }) => {
           </div>
         </div>
 
-        <div className="w-1/2 bg-gray-50">
+        <div className="w-full md:w-1/2 bg-dd-green-100">
           <div className="w-full text-center my-8">
             <h2 className="font-heading text-4xl xs:text-5xl sm:text-6xl xl:text-5xl tracking-tight gs_reveal">
-              {heading}
+              {title}
             </h2>
-            {/* <div className="py-2">
-              <h4>{textOne}</h4>
-              <p>
-                {directions.street}, {directions.city} {directions.zipcode},{" "}
-                {directions.state}
-              </p>
-            </div> */}
           </div>
 
           <div className="w-full h-full flex justify-center gs_reveal">
-            <div className="w-full max-w-xl">
+            <div className="pb-8 md:pb-0 md:w-full max-w-xl">
               <div className="lg:ml-auto p-8 bg-white rounded-2xl shadow-md overflow-hidden">
                 {isFormSubmitted ? (
                   <div className="text-center">
                     <h4 className="text-2xl font-medium mb-8">Thank you!</h4>
-                    <p className="text-lg">
-                      Your message has been sent successfully.
-                    </p>
+                    <p className="text-lg">{contactForm.success.title}</p>
                     <button
                       onClick={startNewSubmission}
                       className="flex w-full py-3 px-5 items-center justify-center font-medium text-white bg-dd-green-300 hover:bg-dd-green-100 hover:text-black  rounded-full transition duration-200 mt-4"
                     >
-                      Submit Another Response
+                      {contactForm.success.cta}
                     </button>
                   </div>
                 ) : (
                   <>
                     <h4 className="text-2xl font-medium mb-8 text-center">
-                      Send us a message
+                      {contactForm.empty.title}
                     </h4>
                     <form onSubmit={onSubmit}>
                       <label
                         htmlFor="fullName"
                         className="block pl-4 mb-1 text-sm font-medium"
                       >
-                        Full Name
+                        {contactForm.empty.inputName}
                       </label>
                       <input
                         type="text"
@@ -165,7 +156,7 @@ export const Maps = ({ heading, directions, textOne, cta }) => {
                         htmlFor="email"
                         className="block pl-4 mb-1 text-sm font-medium"
                       >
-                        Email
+                        {contactForm.empty.inputEmail}
                       </label>
                       <input
                         type="email"
@@ -182,7 +173,7 @@ export const Maps = ({ heading, directions, textOne, cta }) => {
                         htmlFor="message"
                         className="block pl-4 mb-1 text-sm font-medium"
                       >
-                        Message
+                        {contactForm.empty.inputMessage}
                       </label>
                       <textarea
                         id="message"
@@ -196,7 +187,7 @@ export const Maps = ({ heading, directions, textOne, cta }) => {
                         type="submit"
                         className="flex w-full py-3 px-5 items-center justify-center font-medium text-white bg-dd-green-300 hover:bg-dd-green-100 hover:text-black rounded-full transition duration-200"
                       >
-                        <span className="mr-2">Submit</span>
+                        <span className="mr-2"> {contactForm.empty.cta}</span>
                         <svg
                           width="21"
                           height="20"

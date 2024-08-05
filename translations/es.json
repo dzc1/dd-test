@@ -12,6 +12,7 @@
       "ctaButton": "Soluciones de Lavado"
     },
     "solutions": {
+      "ourLocation": "Nuestra Ubicación",
       "title": "Nuestras Soluciones de Lavado",
       "subtitle": "Ofrecemos una variedad de máquinas de lavandería, incluyendo 3 lavadoras de 12 kg, 1 lavadora de 16 kg, 1 lavadora de 20 kg y 2 secadoras de 18 kg. Elija un tamaño de carga que se adapte a sus necesidades y presupuesto.",
       "priceInTitle": "Precio en",
@@ -51,7 +52,23 @@
         }
       }
     },
-    "maps": {}
+    "maps": {
+      "title": "¿Dónde puede encontrarnos?",
+      "cta": "Direcciones",
+      "contactForm": {
+        "success": {
+          "title": "Su mensaje ha sido enviado con éxito.",
+          "cta": "Enviar otro mensaje"
+        },
+        "empty": {
+          "title": "Envíenos un mensaje",
+          "inputName": "Nombre",
+          "inputEmail": "Correo Electrónico",
+          "inputMessage": "Mensaje",
+          "cta": "Enviar Mensaje"
+        }
+      }
+    }
   },
   "IndexPage": {
     "title": "next-intl example - Home Page - Spaanish",

@@ -115,12 +115,13 @@ const Header = ({ links }) => {
               </div>
             </div>
           </div>
-          <div className="mobile-menu-icon-container">
+          {/* UNCOMMENT TO ACTIVATE MENU */}
+          {/* <div className="mobile-menu-icon-container">
             <Bars3BottomRightIcon
               onClick={toggleMenu}
               className="mobile-icon"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

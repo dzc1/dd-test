@@ -23,6 +23,7 @@ export const Solutions = ({
   includedInPrice,
   features,
   dryerFeatures,
+  ourLocation,
 }) => {
   const [toggle, setToggle] = useState("cc");
   useEffect(() => {
@@ -295,13 +296,13 @@ export const Solutions = ({
           </div>
         </div>
       </div>
-      <div className="flex w-full justify-center items-center pt-8">
+      <div className="flex w-full justify-center items-center pt-8 px-4">
         <Link
-          className="py-4 px-6  text-lg text-center font-medium text-white  bg-dd-green-300 hover:bg-dd-green-100 hover:text-black rounded-full transition duration-200"
+          className="py-4 px-6  text-lg text-center font-medium text-white  bg-dd-green-300 hover:bg-dd-green-100 hover:text-black rounded-full transition duration-200 w-full md:w-1/2"
           href="#solutions"
           onClick={scrollToSection}
         >
-          Our Location
+          {ourLocation}
         </Link>
       </div>
     </section>
