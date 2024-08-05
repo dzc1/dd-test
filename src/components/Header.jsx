@@ -90,7 +90,7 @@ const Header = ({ links }) => {
       </div>
       <div className="header-outer-container">
         <div className="flex justify-center items-center py-4">
-          <div className="w-full">
+          <div className="w-full flex justify-center">
             <div className="header-inner-container">
               <div className="header-logo-container">
                 <Link href="/">
