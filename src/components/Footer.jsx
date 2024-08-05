@@ -9,7 +9,7 @@ export const Footer = ({ heading, subHeading, links }) => {
   };
   return (
     <>
-      <section className="py-12 bg-dd-green-100 overflow-hidden">
+      <section className="py-12 bg-dd-green-200 overflow-hidden">
         <Image
           src={background}
           width={140}
@@ -20,7 +20,7 @@ export const Footer = ({ heading, subHeading, links }) => {
         <div className="relative z-10 container px-4 mx-auto">
           <div className="">
             <div className="w-full">
-              <h2 className="text-center font-heading text-4xl xs:text-5xl sm:text-6xl xl:text-5xl tracking-tight ">
+              <h2 className="text-center font-heading text-white text-4xl xs:text-5xl sm:text-6xl xl:text-5xl tracking-tight ">
                 {heading}
               </h2>
 
